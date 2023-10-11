@@ -86,7 +86,6 @@ class Request
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5000);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4'));
-        curl_setopt($ch, CURLOPT_REDIR_PROTOCOLS, -1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         if ($zip) {
             curl_setopt($ch, CURLOPT_ENCODING, "gzip,deflate");

@@ -17,7 +17,7 @@ class Respons
      * @param mixed $array 需要返回的数组
      * @param boolean $cache 是否对接口响应内容进行缓存,默认为是
      */
-    public static function json(mixed $array,  $cache = true, $status = 1)
+    public static function json($array,  $cache = true, $status = 1)
     {
         header('content-type:application/json;charset=utf-8');
         if ($cache) {

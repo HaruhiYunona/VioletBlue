@@ -26,7 +26,7 @@ if (empty($_COOKIE['passWd'])) {
 <body class="min_body">
     <div class="suitable">
         <div class="tool_bar">
-            <span class="tool_exit"><img src="../static/img//arrow-left-circle.svg" class="tool_icon">退出</span>
+            <span class="tool_exit"><img src="../static/img/arrow-left-circle.svg" class="tool_icon">退出</span>
         </div>
         <div class="title" style="margin-bottom:30px">用户协议</div>
         <span class="lastest_version">MIT LICENSE</span>

@@ -10,6 +10,9 @@ if (is_installer()) {
     header("Location:../index.php");
     return 0;
 }
+
+setcookie("passWd", "123456",time()+3600,'/');
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +49,7 @@ if (is_installer()) {
     </style>
     <div class="suitable">
         <p class="title" style="margin-top: 30px;width:100%">安装成功</p>
-        <img src="./icon.avif" class="installer_icon">
+        <img src="./icon.webp" class="installer_icon">
         <p>恭喜您安装成功了!现在您已经可以访问您的站点。不过在此之前请您先设置好您的站点。<br>
             点击这里开始设置→<a href="../admin/setting.php" target="_blank">../admin/setting.php</a>
         </p><br><br>
@@ -58,7 +61,8 @@ if (is_installer()) {
                             echo $url; ?>" target="_blank"><?php $url  = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
                                                             $url .= "://" . $_SERVER['HTTP_HOST'];
                                                             $url .= "/admin";
-                                                            echo $url;unlink('./installSus.php') ?></a>
+                                                            echo $url;
+                                                            unlink('./installSus.php') ?></a>
             <br>
             请务必记住管理后台的网址为：你的域名+"/admin"
             <br>

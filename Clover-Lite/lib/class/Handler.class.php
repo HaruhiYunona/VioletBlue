@@ -43,6 +43,9 @@ class Handler
     public static function io()
     {
         $rqFunction = Request::path();
+        if ($rqFunction == 'io') {
+            return Respons::json('no access', true, 0);
+        }
         $funcName = 'CloverLite\\Handler::' . $rqFunction;
         method_exists('CloverLite\\Handler', $rqFunction) or die('not found Func');
         return $funcName();

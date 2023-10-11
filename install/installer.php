@@ -41,7 +41,7 @@ if (is_installer()) {
     </style>
     <div class="suitable">
         <p class="title" style="margin-top: 30px;width:100%">安装VioletBlue</p>
-        <img src="./icon.avif" class="installer_icon">
+        <img src="./icon.webp" class="installer_icon">
 
         <div class="form-box">
             <form action="./installRun.php" method="post">
