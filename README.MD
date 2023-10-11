@@ -33,9 +33,7 @@
 
 <center>if<img src="./README_RES/a01.png" alt="a01" />↓<img src="./README_RES/a02.png" alt="a02"/></center>
 
-                                                                                                                     ↓
-
-<img src="./README_RES/a03.png" alt="a03" />
+↓<img src="./README_RES/a03.png" alt="a03" />
 
 #### 2.绑定您的域名并创建数据库
 
