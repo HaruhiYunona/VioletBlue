@@ -10,7 +10,10 @@
 <img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size"/>
 <img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge"/>
 <img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red"/>
-<img alt="Static Badge" src="https://img.shields.io/badge/js-JavaScript-gold?logo=javascript"><img alt="Static Badge" src="https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP"><img alt="Static Badge" src="https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5"><img alt="Static Badge" src="https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3">
+<img alt="Static Badge" src="https://img.shields.io/badge/js-JavaScript-gold?logo=javascript">
+<img alt="Static Badge" src="https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP">
+<img alt="Static Badge" src="https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5">
+<img alt="Static Badge" src="https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3">
 
 
 
