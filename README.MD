@@ -27,9 +27,9 @@
 
 #### 1.PHP服务器环境
 
-	若您使用的PHP服务器为Apache，您直接将本网站源代码（或release）放置到网站根目录即可。
+若您使用的PHP服务器为Apache，您直接将本网站源代码（或release）放置到网站根目录即可。
 
-   若您使用的PHP服务器为NGINX，请您将本网站源代码（或release）放置到网站根目录后复制nginx.conf的内容到网站伪静态配置文件。
+若您使用的PHP服务器为NGINX，请您将本网站源代码（或release）放置到网站根目录后复制nginx.conf的内容到网站伪静态配置文件。
 
 <center>if<img src="./README_RES/a01.png" alt="a01" />↓<img src="./README_RES/a02.png" alt="a02"/>↓<img src="./README_RES/a03.png" alt="a03" /></center>
 
