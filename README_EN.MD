@@ -20,7 +20,7 @@
 
 ###### choose your language
 
-[<img alt="Static Badge" src="https://img.shields.io/badge/LANG-Chinese-red">](./README_EN.MD)
+[<img alt="Static Badge" src="https://img.shields.io/badge/LANG-简体中文-red">](./README_EN.MD)
 
 
 
