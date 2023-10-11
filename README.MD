@@ -1,6 +1,6 @@
 # VioletBlue 歌单站
 
-<img src="F:\Biuld Projects\H5\VioletBlue\install\icon.webp" alt="icon" style="zoom:50%;" />
+<img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
 
 <center><img src="https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total" alt="GitHub all releases" /><img src="https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue" alt="GitHub release (with filter)" /><img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue">
 <img src="https://img.shields.io/github/license/HaruhiYunona/VioletBlue" alt="GitHub" /><img src="https://img.shields.io/badge/Core-Clover_Lite-pink" alt="Static Badge" /><img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size" /><img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge" /><img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red">
