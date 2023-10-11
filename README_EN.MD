@@ -28,9 +28,9 @@
 
 #### 1.PHP Server environment
 
-If you are using Apache PHP server , you can directly place the source code (or release) of this website in the root directory of the website.
+If you are using Apache PHP server , you can directly place the source code (or release) of this in the root directory of the website.
 
-Or using NGINX PHP server,  please place the source code (or release) of this website in the root directory of the website and copy the content of "nginx. conf" to the pseudo static configuration file of the website.
+Or using NGINX PHP server,  please place the source code (or release) of this in the root directory of the website and copy the content of "nginx. conf" to the pseudo static configuration file of the website.
 
 <center>if<img src="./README_RES/a01.png" alt="a01" />↓<img src="./README_RES/a02.png" alt="a02"/>↓<img src="./README_RES/a03.png" alt="a03" /></center>
 
