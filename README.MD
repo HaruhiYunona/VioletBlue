@@ -2,8 +2,14 @@
 
 <img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
 
-<img src="https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total" alt="GitHub all releases"/><img src="https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue" alt="GitHub release (with filter)"  style="margin-left:10px;"/><img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue"  style="margin-left:10px;">
-<img src="https://img.shields.io/github/license/HaruhiYunona/VioletBlue" alt="GitHub"  style="margin-left:10px;"/><img src="https://img.shields.io/badge/Core-Clover_Lite-pink" alt="Static Badge"  style="margin-left:10px;"/><img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size"  style="margin-left:10px;"/><img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge"  style="margin-left:10px;"/><img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red"  style="margin-left:10px;">
+<img src="https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total" alt="GitHub all releases"/>
+<img src="https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue" alt="GitHub release (with filter)"/>
+<img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue"/>
+<img src="https://img.shields.io/github/license/HaruhiYunona/VioletBlue" alt="GitHub"/>
+<img src="https://img.shields.io/badge/Core-Clover_Lite-pink" alt="Static Badge"/>
+<img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size"/>
+<img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge"/>
+<img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red"/>
 <img alt="Static Badge" src="https://img.shields.io/badge/js-JavaScript-gold?logo=javascript"><img alt="Static Badge" src="https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP"><img alt="Static Badge" src="https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5"><img alt="Static Badge" src="https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3">
 
 
