@@ -1,13 +1,20 @@
 # VioletBlue Playlist Website
 
-<img src="F:\Biuld Projects\H5\VioletBlue\install\icon.webp" alt="icon" style="zoom:50%;" />
+<img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
 
-<center><img src="https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total" alt="GitHub all releases" /><img src="https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue" alt="GitHub release (with filter)" /><img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue">
-<img src="https://img.shields.io/github/license/HaruhiYunona/VioletBlue" alt="GitHub" /><img src="https://img.shields.io/badge/Core-Clover_Lite-pink" alt="Static Badge" /><img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size" /><img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge" /><img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red">
+![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)
+![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)
+![Static Badge](https://img.shields.io/badge/Core-Clover_Lite-pink)
+![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)
+![Static Badge](https://img.shields.io/badge/PHP-5.6.0%2B%20-brown)
+![Static Badge](https://img.shields.io/badge/server-LNMP/WAMP-red)
+![Static Badge](https://img.shields.io/badge/js-JavaScript-gold?logo=javascript)
+![Static Badge](https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP)
+![Static Badge](https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5)
+![Static Badge](https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3)
 
-<center>
-    <img alt="Static Badge" src="https://img.shields.io/badge/js-JavaScript-gold?logo=javascript"><img alt="Static Badge" src="https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP"><img alt="Static Badge" src="https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5"><img alt="Static Badge" src="https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3">
-</center>
 
 
 
