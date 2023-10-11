@@ -1,6 +1,6 @@
 # VioletBlue 歌单站
 
-<center><img src="./install/icon.webp" alt="icon" style="zoom:50%;" /></center>
+<div align=center><img src="./install/icon.webp" alt="icon" style="zoom:50%;" /></div>
 
 ![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
