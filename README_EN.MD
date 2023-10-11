@@ -1,6 +1,6 @@
 # VioletBlue Playlist Website
 
-<img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
+<div align=center><img src="./install/icon.webp" alt="icon" style="zoom:50%;" /></div>
 
 ![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
@@ -32,11 +32,7 @@ If you are using Apache PHP server , you can directly place the source code (or 
 
 Or using NGINX PHP server,  please place the source code (or release) of this website in the root directory of the website and copy the content of "nginx. conf" to the pseudo static configuration file of the website.
 
-<center>if<img src="./README_RES/a01.png" alt="a01" />→<img src="./README_RES/a02.png" alt="a02"/></center>
-
-​                                                                                                                     ↓
-
-<img src="./README_RES/a03.png" alt="a03" />
+<center>if<img src="./README_RES/a01.png" alt="a01" />↓<img src="./README_RES/a02.png" alt="a02"/>↓<img src="./README_RES/a03.png" alt="a03" /></center>
 
 #### 2.Bind your domain and create a database
 
