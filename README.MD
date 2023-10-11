@@ -2,18 +2,18 @@
 
 <img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
 
-[![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
-[![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
-[![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)
-[![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)
-[![Static Badge](https://img.shields.io/badge/Core-Clover_Lite-pink)
-[![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)
-[![Static Badge](https://img.shields.io/badge/PHP-5.6.0%2B%20-brown)
-[![Static Badge](https://img.shields.io/badge/server-LNMP/WAMP-red)\n
-[![Static Badge](https://img.shields.io/badge/js-JavaScript-gold?logo=javascript)
-[![Static Badge](https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP)
-[![Static Badge](https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5)
-[![Static Badge](https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3)
+![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)
+![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)
+![Static Badge](https://img.shields.io/badge/Core-Clover_Lite-pink)
+![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)
+![Static Badge](https://img.shields.io/badge/PHP-5.6.0%2B%20-brown)
+![Static Badge](https://img.shields.io/badge/server-LNMP/WAMP-red)
+![Static Badge](https://img.shields.io/badge/js-JavaScript-gold?logo=javascript)
+![Static Badge](https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP)
+![Static Badge](https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5)
+![Static Badge](https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3)
 
 
 
