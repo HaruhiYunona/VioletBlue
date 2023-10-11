@@ -2,18 +2,18 @@
 
 <img src="./install/icon.webp" alt="icon" style="zoom:50%;" />
 
-<img src="https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total" alt="GitHub all releases"/>
-<img src="https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue" alt="GitHub release (with filter)"/>
-<img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue"/>
-<img src="https://img.shields.io/github/license/HaruhiYunona/VioletBlue" alt="GitHub"/>
-<img src="https://img.shields.io/badge/Core-Clover_Lite-pink" alt="Static Badge"/>
-<img src="https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue" alt="GitHub repo size"/>
-<img src="https://img.shields.io/badge/PHP-5.6.0%2B%20-brown" alt="Static Badge"/>
-<img alt="Static Badge" src="https://img.shields.io/badge/server-LNMP/WAMP-red"/>
-<img alt="Static Badge" src="https://img.shields.io/badge/js-JavaScript-gold?logo=javascript">
-<img alt="Static Badge" src="https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP">
-<img alt="Static Badge" src="https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5">
-<img alt="Static Badge" src="https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3">
+[![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
+[![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
+[![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)
+[![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)
+[![Static Badge](https://img.shields.io/badge/Core-Clover_Lite-pink)
+[![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)
+[![Static Badge](https://img.shields.io/badge/PHP-5.6.0%2B%20-brown)
+[![Static Badge](https://img.shields.io/badge/server-LNMP/WAMP-red)\n
+[![Static Badge](https://img.shields.io/badge/js-JavaScript-gold?logo=javascript)
+[![Static Badge](https://img.shields.io/badge/PHP-PHP%2056+-purple?logo=PHP)
+[![Static Badge](https://img.shields.io/badge/HTML-HTML5-red?logo=HTML5)
+[![Static Badge](https://img.shields.io/badge/CSS-CSS3-orange?logo=CSS3)
 
 
 
@@ -27,13 +27,13 @@
 
 #### 1.PHP服务器环境
 
-​	若您使用的PHP服务器为Apache，您直接将本网站源代码（或release）放置到网站根目录即可。
+	若您使用的PHP服务器为Apache，您直接将本网站源代码（或release）放置到网站根目录即可。
 
    若您使用的PHP服务器为NGINX，请您将本网站源代码（或release）放置到网站根目录后复制nginx.conf的内容到网站伪静态配置文件。
 
 <center>if<img src="./README_RES/a01.png" alt="a01" />→<img src="./README_RES/a02.png" alt="a02"/></center>
 
-​                                                                                                                     ↓
+                                                                                                                     ↓
 
 <img src="./README_RES/a03.png" alt="a03" />
 
