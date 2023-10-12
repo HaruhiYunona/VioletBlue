@@ -169,7 +169,7 @@ const tagClick = (index) => {
 const aimto = (song, uid) => {
     passWd = $_COOKIE('passWd');
     if (passWd == null || passWd == undefined) {
-        copyToClipboard('点灯 ' + song + '');
+        copyToClipboard('点歌 ' + song + '');
     } else {
         window.opener = null;
         window.open('./admin/edit.php?uid=' + uid, '_blank');
@@ -274,7 +274,7 @@ const search = () => {
                     listView(response)
                 } else {
                     alertify.alert("随机抽取成功", "您随机到的歌曲是《" + response.content[0].song + "》-" + response.content[0].singer + ",点击OK为您自动复制到剪贴板。", function () {
-                        copyToClipboard('点灯 ' + response.content[0].song);
+                        copyToClipboard('点歌 ' + response.content[0].song);
                     });
                 }
             }
