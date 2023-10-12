@@ -30,6 +30,7 @@ class Module
      */
     public static function songList($tag, $page)
     {
+        $tag = addslashes($tag);
         $pageStart = ($page - 1) * 25;
         return ($tag == '全部') ? "SELECT * FROM `" . TABLE_PRE_NAME . "_song` LIMIT $pageStart,25" : "SELECT * FROM `" . TABLE_PRE_NAME . "_song` WHERE `type` LIKE '%" . $tag . "%' LIMIT " . $pageStart . ",25";
     }
@@ -62,6 +63,7 @@ class Module
      */
     public static function search($search)
     {
+        $search=addslashes($search);
         return "SELECT * FROM `" . TABLE_PRE_NAME . "_song` WHERE `name` LIKE '%" . $search . "%' OR `singer` LIKE '%" . $search . "%' OR `note` LIKE '%" . $search . "%' OR `uid` = '" . $search . "'";
     }
 
@@ -95,6 +97,8 @@ class Module
      */
     public static function check($name, $singer)
     {
+        $name=addslashes($name);
+        $singer=addslashes($singer);
         return "SELECT * FROM `" . TABLE_PRE_NAME . "_song` WHERE `name` = '{$name}' AND `singer` = '{$singer}'";
     }
 
@@ -110,6 +114,7 @@ class Module
      */
     public static function addOne($name, $singer, $tags, $claim, $time)
     {
+        list($name,$singer,$tags,$claim)=[addslashes($name),addslashes($singer),addslashes($tags),addslashes($claim)];
         return "INSERT INTO `" . TABLE_PRE_NAME . "_song` (`uid`, `name`, `singer`, `type`, `note`, `time`) VALUES (NULL, '{$name}', '{$singer}', '{$tags}', '{$claim}', '{$time}');";
     }
 
@@ -136,6 +141,7 @@ class Module
      */
     public static function edit($uid, $name, $singer, $tags, $claim)
     {
+        list($name,$singer,$tags,$claim)=[addslashes($name),addslashes($singer),addslashes($tags),addslashes($claim)];
         return "UPDATE `" . TABLE_PRE_NAME . "_song` SET `name` = '{$name}', `singer` = '{$singer}', `type` = '{$tags}', `note` = '{$claim}' WHERE `" . TABLE_PRE_NAME . "_song`.`uid` = {$uid}";
     }
 
@@ -149,6 +155,8 @@ class Module
      */
     public static function option($passWd, $notice, $tags)
     {
+        $notice=addslashes($notice);
+        $tags=addslashes($tags);
         return "UPDATE  `" . TABLE_PRE_NAME . "_others` SET `value` = '" . $notice . "' WHERE  `" . TABLE_PRE_NAME . "_others`.`name` = 'notice';
         UPDATE  `" . TABLE_PRE_NAME . "_others` SET `value` = '" . $tags . "' WHERE  `" . TABLE_PRE_NAME . "_others`.`name` = 'type';
         UPDATE  `" . TABLE_PRE_NAME . "_others` SET `value` = '" . $passWd . "' WHERE  `" . TABLE_PRE_NAME . "_others`.`name` = 'passWd';";

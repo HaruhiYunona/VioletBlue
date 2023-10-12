@@ -64,11 +64,13 @@ if (empty($_COOKIE['passWd'])) {
         }
 
         const script = () => {
+            //获取公告
             post('../api/getNotice').then((response) => {
                 if (response.code == 1) {
                     document.getElementById('notice').value = response.content.replace(/\s*<\s*br\s*>\s*/g, '\n');
                 }
             });
+            //获取歌单类型
             post('../api/getTagList').then((response) => {
                 if (response.code == 1) {
                     let htmType = '';
@@ -165,14 +167,14 @@ if (empty($_COOKIE['passWd'])) {
                     loadHide();
                     if (response.code == 1) {
                         setCookie("passWd","",-1);
-                        alertify.success("修 改 成 功");
+                        alertify.success("修改 成 功");
                         setTimeout(() => {
                             window.opener = null;
                             window.open('', '_self');
                             window.close();
                         }, 1000);
                     } else {
-                        alertify.error("修 改 失 败");
+                        alertify.error("修改 失 败");
                     }
                 });
             }

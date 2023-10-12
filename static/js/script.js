@@ -193,7 +193,7 @@ const listView = (response) => {
         for (let n = 0; typeLength > n; n++) {
             htmType = htmType + '<span class="info_tag">' + response.content[i].type[n] + '</span>';
         }
-        htmSong = htmSong + '<li class="song_item' + ((response.content[i].notice != '') ? ' song_item_claim"' : '"') + ' onClick="aimto(\'' + response.content[i].song + '\',\'' + response.content[i].uid + '\')" id="song_' + response.content[i].uid + '"><div class="song_info"><span>' + response.content[i].song + '</span><span> - ' + response.content[i].singer + '</span></div>' + ((response.content[i].notice != '') ? '<span class="claim">' + response.content[i].notice + '</span>' : '') + '<div class="info_tag_area">' + htmType + '</div></li>';
+        htmSong = htmSong + '<li class="song_item' + ((response.content[i].notice != '') ? ' song_item_claim"' : '"') + ' onClick="aimto(\'' + response.content[i].song + '\',\'' + response.content[i].uid + '\')" id="song_' + response.content[i].uid + '"><div class="song_info">' + response.content[i].song + ' - ' + response.content[i].singer + '</div>' + ((response.content[i].notice != '') ? '<span class="claim">' + response.content[i].notice + '</span>' : '') + '<div class="info_tag_area">' + htmType + '</div></li>';
     }
     document.getElementById('songs_list').innerHTML = oldHtm + htmSong;
     document.getElementById('songs_list').removeEventListener('scroll', scrollList);
