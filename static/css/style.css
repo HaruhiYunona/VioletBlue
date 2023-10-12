@@ -139,6 +139,10 @@ body {
     position: absolute;
     width: 70%;
     left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
     top: 15px;
     font-size: large
 }
