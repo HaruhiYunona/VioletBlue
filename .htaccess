@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*Clover-Lite(?!\/cache).*$ /Clover-Lite/index.php [r=403]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*api.*$ /Clover-Lite/index.php [QSA,L]
