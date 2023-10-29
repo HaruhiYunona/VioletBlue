@@ -83,6 +83,19 @@ const dateTime = () => {
 }
 
 
+/**
+ * urlencode参数
+ * @param {*} str 
+ * @returns 
+ */
+const urlencode = (str) => {
+    str = (str + '').toString();
+    return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
+        replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
+}
+
+
+
 
 /**
  * POST请求函数 
@@ -110,7 +123,7 @@ const post = (aim, array = {}) => {
 const queryParse = (query) => {
     let queryText = "";
     for (let key in query) {
-        queryText += `${key}=${query[key]}&`;
+        queryText += `${key}=${urlencode(query[key])}&`;
     }
     return queryText.slice(0, -1);
 }
