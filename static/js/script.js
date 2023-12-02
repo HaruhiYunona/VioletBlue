@@ -165,10 +165,10 @@ const useVar = (id, value) => {
  * @param {int} index DOM索引
  */
 const tagClick = (index) => {
-    document.getElementsByClassName('tag_selected')[0].setAttribute('class', 'tag');
-    document.getElementsByClassName('tag')[index].setAttribute('class', 'tag_selected');
-    flashList(document.getElementsByClassName('tag_selected')[0].innerHTML, 1, true);
-    document.getElementById('type').value = document.getElementsByClassName('tag_selected')[0].innerHTML;
+    document.getElementsByClassName('type_selected')[0].setAttribute('class', 'type');
+    document.getElementsByClassName('type')[index].setAttribute('class', 'type_selected');
+    flashList(document.getElementsByClassName('type_selected')[0].innerHTML, 1, true);
+    document.getElementById('type').value = document.getElementsByClassName('type_selected')[0].innerHTML;
     document.getElementById('page').value = 1;
 }
 

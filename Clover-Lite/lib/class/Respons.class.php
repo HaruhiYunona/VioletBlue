@@ -21,7 +21,7 @@ class Respons
     {
         header('content-type:application/json;charset=utf-8');
         if ($cache) {
-            $cache_time = API_CACHE_TIME/1;
+            $cache_time = API_CACHE_TIME / 1;
             $modified_time = @$_SERVER['HTTP_IF_MODIFIED_SINCE'];
             if (strtotime($modified_time) + $cache_time > time()) {
                 header("HTTP/1.1 304");
@@ -45,5 +45,21 @@ class Respons
             $array = $array['message'];
         }
         echo json_encode(['code' => $status / 1, 'content' => $array], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    }
+
+
+
+    /**
+     * 静态文件版本检测模块
+     * @param mixed $filename 
+     */
+    public static function verCheck($filename)
+    {
+        $versionPath = __DIR__ . '/../..' . ENV_DIR . '/' . $filename . ".txt";
+        if (file_exists($versionPath)) {
+            $fo = fopen($versionPath, 'r');
+            $versionFile = fread($fo, filesize($versionPath));
+            return ($versionFile != null) ? $versionFile : time();
+        }
     }
 }

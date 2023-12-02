@@ -57,7 +57,7 @@ class WebGet
                 'mid' => VUP_MID,
                 'name' => VTB_NICKNAME,
                 'sign' => VTB_SIGN,
-                'face' => './static/img/face.png',
+                'face' => './static/img/face.png?v=' . Respons::verCheck('face.png'),
                 'level' => VTB_LEVEL,
                 'follower' => VTB_FOLLOWER,
                 'following' => VTB_FOLLOWING

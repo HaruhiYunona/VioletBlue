@@ -34,6 +34,8 @@ Or using NGINX PHP server,  please place the source code (or release) of this in
 
 <center>if<img src="./README_RES/a01.png" alt="a01" />↓<img src="./README_RES/a02.png" alt="a02"/>↓<img src="./README_RES/a03.png" alt="a03" /></center>
 
+Please enable the fileinfo extension, otherwise the admin page's upload function will not be available.
+
 #### 2.Bind your domain and create a database
 
 #### 3.Access your domain

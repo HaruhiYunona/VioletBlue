@@ -130,6 +130,10 @@ class Request
             return ['result' => 0, 'message' => '文件类型不正确'];
         }
         $filePath = $path . '/' . $filename;
+        $versionPath = __DIR__ . '/../..' . ENV_DIR . '/' . $filename . ".txt";
+        $versionFile = fopen($versionPath, 'w');
+        fwrite($versionFile, time());
+        fclose($versionFile);
         $bit = file_put_contents($filePath, $fileStream);
         return ($bit <= 0) ? ['result' => 0, 'message' => '上传文件失败.'] : ['result' => 1, 'message' => '上传文件成功.'];
     }

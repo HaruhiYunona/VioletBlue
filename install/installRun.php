@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `" . $tablePreName . "_song` (
     `time` int NOT NULL,
     PRIMARY KEY (`uid`),
     UNIQUE KEY `uid` (`uid`)
-  ) ENGINE=InnoDB AUTO_INCREMENT=502 DEFAULT CHARSET=utf8mb3;
+  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `" . $tablePreName . "_others` (`name`, `value`) VALUES
 ('notice', '暂无公告喵~'),

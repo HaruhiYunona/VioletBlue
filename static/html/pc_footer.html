@@ -25,11 +25,11 @@ const script = () => {
     post('./api/getTagList').then((response) => {
         if (response.code == 1) {
             let typeLength = response.content.length;
-            let htmType = '<span class="tag_selected">' + response.content[0] + '</span>';
+            let htmType = '<span class="type_selected">' + response.content[0] + '</span>';
             for (let i = 1; typeLength > i; i++) {
-                htmType = htmType + '<span class="tag">' + response.content[i] + '</span>';
+                htmType = htmType + '<span class="type">' + response.content[i] + '</span>';
             }
-            document.getElementsByClassName('tag_list')[0].innerHTML = document.getElementsByClassName('tag_list')[0].innerHTML + htmType;
+            document.getElementsByClassName('type_list')[0].innerHTML = document.getElementsByClassName('type_list')[0].innerHTML + htmType;
             let tag = document.getElementById('type_list').getElementsByTagName('span');
             for (let i = 0; tag.length > i; i++) {
                 tag[i].index = i;
