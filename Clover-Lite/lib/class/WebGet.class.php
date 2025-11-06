@@ -26,11 +26,7 @@ class WebGet
                 }
             } else {
                 getVInfo:
-                $stat = json_decode(Request::curlGet("https://api.bilibili.com/x/relation/stat?vmid=" . $mid), true)['data'];
-                $b_page = Request::curlGet('https://space.bilibili.com/' . $mid, true);
-                preg_match('/(?<=window.__INITIAL_STATE__=).*?(?=;\(function\(\)\{)/', $b_page, $str);
-                $allInfo = json_decode($str[0], true);
-                $array = $allInfo['space']['info'];
+                $array = json_decode(Request::curlGet('http://uapis.cn/api/v1/social/bilibili/userinfo?uid=' . $mid), true);
                 if (empty($array['mid'])) {
                     $vInfo = false;
                 }
@@ -42,8 +38,8 @@ class WebGet
                     'sign' => $array['sign'],
                     'face' => $array['face'],
                     'level' => $array['level'],
-                    'follower' => $stat['follower'],
-                    'following' => $stat['following']
+                    'follower' => $array['follower'],
+                    'following' => $array['following']
                 ];
                 $cacheFile = fopen(__DIR__ . '/../..' . CACHE_DIR . '/vUpInfo.txt', 'w');
                 fwrite($cacheFile, json_encode($vInfo, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
