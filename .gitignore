@@ -1,0 +1,39 @@
+# PHP 依赖与本地工具
+/vendor/
+/.tools/
+
+# 前端依赖、构建及测试结果
+/frontend/node_modules/
+/frontend/test-results/
+/frontend/playwright-report/
+/public/build/
+/setup/
+
+# 运行配置、会话和安装标记
+/src/config/config_database.yaml
+/src/config/config_database.yaml.php
+/src/config/config_site.local.yaml
+/src/config/config_theme.local.yaml
+/storage/*
+!/storage/.gitkeep
+/public/install/.block
+.env
+.env.*
+!.env.example
+*.log
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 编辑器和系统文件
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

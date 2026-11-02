@@ -1,0 +1,12 @@
+# 站点基础资料；MID 为 0 时使用本地资料。
+title: 'VioletBlue 歌单'
+detail: '欢迎来到我的歌单站'
+icp: ''
+net: ''
+mid: 0
+nickname: 'VioletBlue'
+level: 1
+following: 0
+follower: 0
+sign: '欢迎来到我的歌单站'
+api_cache_time: 3600

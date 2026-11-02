@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>VioletBlue 歌单</title>
+    <!-- browser-guard-head -->
+    <style>body[data-booting]{margin:0;background:#fff}body[data-booting] #app{visibility:hidden}.boot-screen{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#fff;color:#9370db;font:13px system-ui;transition:opacity .2s}.boot-orbit{width:34px;height:34px;border:3px solid #eee8fa;border-top-color:#9370db;border-radius:50%;animation:boot-spin .8s linear infinite}.boot-screen.is-complete{opacity:0;pointer-events:none}.boot-screen button{display:none}.boot-error button{display:block}@keyframes boot-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.boot-orbit{animation:none}}</style>
+  </head>
+  <body data-booting>
+    <!-- browser-guard-body -->
+    <div id="boot-loader" class="boot-screen" role="status"><span class="boot-orbit" aria-hidden="true"></span><p>正在加载…</p><button type="button" onclick="location.reload()">重新加载</button></div>
+    <div id="app"></div>
+    <script type="module" src="/src/entry.ts"></script>
+  </body>
+</html>

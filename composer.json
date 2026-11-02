@@ -1,0 +1,19 @@
+{
+  "name": "violetblue/playlist",
+  "description": "VioletBlue PHP backend",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.4.1",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-mbstring": "*",
+    "ext-fileinfo": "*",
+    "ext-curl": "*",
+    "symfony/yaml": "^7.4.18 || ^8.1.6"
+  },
+  "autoload": {"psr-4": {"VioletBlue\\": "src/"}},
+  "scripts": {"test": "@php tests/test_backend.php"},
+  "config": {"sort-packages": true, "allow-plugins": {}},
+  "repositories": {"packagist.org": {"type": "composer", "url": "https://repo.packagist.org"}}
+}

@@ -1,0 +1,4 @@
+# GitHub Release 仓库；patch 为可跨版本安装的累计补丁。
+repository: 'HaruhiYunona/VioletBlue'
+cache_seconds: 300
+# 可选认证令牌通过服务器环境变量 VB_GITHUB_TOKEN 提供。

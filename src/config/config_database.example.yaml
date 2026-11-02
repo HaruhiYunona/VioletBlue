@@ -1,0 +1,7 @@
+# 安装时填写实际连接信息，保存为 config_database.yaml。
+host: '127.0.0.1'
+port: 3306
+database: 'violetblue'
+username: 'violetblue_user'
+password: ''
+prefix: 'VB'

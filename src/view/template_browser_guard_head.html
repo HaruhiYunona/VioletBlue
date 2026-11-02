@@ -1,0 +1,72 @@
+<style>
+/* 提示页使用独立的基础样式，兼容不支持 CSS 图层和自定义属性的浏览器。 */
+.browser-warning { display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 20000; overflow: auto; background: #f7f5fb; color: #292333; font: 14px/1.8 Arial, "Microsoft YaHei", sans-serif; text-align: left; }
+.browser-unsupported #browser-compatibility { display: table; }
+.browser-unsupported #app, .browser-unsupported #boot-loader { display: none !important; }
+.browser-warning .browser-warning-cell { display: table-cell; vertical-align: middle; padding: 24px 16px; }
+.browser-warning .browser-warning-card { display: block; max-width: 420px; margin: 0 auto; padding: 28px; border: 1px solid #e8e1f1; border-radius: 12px; background: #fff; box-sizing: border-box; }
+.browser-warning .browser-warning-icon { display: block; width: 38px; height: 38px; margin: 0 0 18px; border: 2px solid #9370db; border-radius: 50%; color: #9370db; font: bold 24px/38px Arial, sans-serif; text-align: center; box-sizing: content-box; }
+.browser-warning h1 { margin: 0 0 12px; color: #292333; font: bold 22px/1.5 Arial, "Microsoft YaHei", sans-serif; }
+.browser-warning p { margin: 0 0 18px; color: #686171; font: 14px/1.8 Arial, "Microsoft YaHei", sans-serif; }
+.browser-warning .browser-warning-links { margin: 0 0 14px; }
+.browser-warning a { display: inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border: 1px solid #ddd3ec; border-radius: 6px; background: #fff; color: #7654b3; font: 13px/1.6 Arial, "Microsoft YaHei", sans-serif; text-decoration: none; }
+.browser-warning a:hover { background: #f4effb; }
+.browser-warning button { display: inline-block; margin: 0; padding: 9px 16px; border: 0; border-radius: 6px; background: #9370db; color: #fff; font: 14px/1.6 Arial, "Microsoft YaHei", sans-serif; cursor: pointer; }
+.browser-warning a:focus, .browser-warning button:focus { outline: 2px solid #7654b3; outline-offset: 3px; }
+.browser-warning .browser-warning-note { margin: 18px 0 0; color: #8a8391; font-size: 12px; }
+@media (max-width: 380px) { .browser-warning .browser-warning-card { padding: 22px; } }
+</style>
+<script>
+(function () {
+    'use strict';
+    /** 检查浏览器是否能解析 CSS 图层；返回是否支持。 */
+    function supportsLayers() {
+        var probe = document.createElement('style');
+        try {
+            probe.appendChild(document.createTextNode('@layer vb_browser_probe { .vb-browser-probe { color: red; } }'));
+            document.head.appendChild(probe);
+            return !!(probe.sheet && probe.sheet.cssRules && probe.sheet.cssRules.length && probe.sheet.cssRules[0].cssText.indexOf('@layer') === 0);
+        } catch (error) {
+            return false;
+        } finally {
+            if (probe.parentNode) probe.parentNode.removeChild(probe);
+        }
+    }
+    /** 检查页面所需的 CSS 和 JavaScript 能力；返回是否可启动应用。 */
+    function supportsApplication() {
+        var css = window.CSS;
+        try {
+            return !!(css && typeof css.supports === 'function' && typeof css.registerProperty === 'function'
+                && css.supports('height', '100dvh') && css.supports('color', 'oklch(0.7 0.1 120)')
+                && css.supports('color', 'color-mix(in oklab, red, blue)') && supportsLayers()
+                && window.Promise && window.fetch && window.Proxy && window.Symbol && window.AbortController
+                && window.IntersectionObserver && window.ResizeObserver && window.requestAnimationFrame
+                && Object.fromEntries && Array.prototype.at);
+        } catch (error) {
+            return false;
+        }
+    }
+    var supported = supportsApplication();
+    window.__VB_BROWSER_SUPPORTED__ = supported;
+    if (!supported) {
+        document.documentElement.className += ' browser-unsupported';
+        return;
+    }
+    /** 首屏资源失败或超时后显示重试，页面已就绪时忽略。 */
+    function fail() {
+        if (!document.body || !document.body.hasAttribute('data-booting')) return;
+        var screen = document.getElementById('boot-loader');
+        if (!screen) return;
+        screen.className += ' boot-error';
+        var label = screen.getElementsByTagName('p')[0];
+        if (label) label.textContent = '加载失败，请刷新重试';
+    }
+    var timer = window.setTimeout(fail, 30000);
+    window.addEventListener('vb:app-ready', function () { window.clearTimeout(timer); }, false);
+    window.addEventListener('vb:boot-error', fail, false);
+    window.addEventListener('error', function (event) {
+        var target = event.target;
+        if (target && ((target.tagName === 'SCRIPT' && target.type === 'module') || (target.tagName === 'LINK' && (' ' + target.className + ' ').indexOf(' boot-style ') >= 0))) fail();
+    }, true);
+}());
+</script>
