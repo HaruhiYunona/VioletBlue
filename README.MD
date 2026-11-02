@@ -112,7 +112,7 @@ yarn --cwd frontend build
 5. 按以下代码执行
 
    ```shell
-   php migrate.php
+   php script_migrate.php.php
    ```
 
    如果报错还请修改第3行路径，具体怎么修改自行判断（也可以问AI）
@@ -120,7 +120,7 @@ yarn --cwd frontend build
 6. 如果没有报错，而是提示检测到老数据库信息，恭喜，按以下代码执行就完成迁移了：
 
    ``` shell
-   php migrate.php --apply
+   php script_migrate.php --apply
    ```
 
    至此数据迁移结束。
