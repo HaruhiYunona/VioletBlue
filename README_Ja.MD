@@ -2,7 +2,17 @@
 
 ![Icon](./public/install/icon.webp)
 
-![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)![Static Badge](https://img.shields.io/badge/PHP-8.4.1+-purple?logo=PHP)![Static Badge](https://img.shields.io/badge/Tailwindcss-4.3.3+-blue?logo=Tailwindcss)![Static Badge](https://img.shields.io/badge/NodeJS-22.20.0+-blue?logo=Node.js)![Static Badge](https://img.shields.io/badge/Vue-3.5.44+-green?logo=vue.js)![Static Badge](https://img.shields.io/badge/composer-2.8.6+-purple?logo=composer)![Static Badge](https://img.shields.io/badge/docker-29.9.2+-blue?logo=docker)
+![GitHub all releases](https://img.shields.io/github/downloads/HaruhiYunona/VioletBlue/total)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/HaruhiYunona/VioletBlue)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/HaruhiYunona/VioletBlue)
+![GitHub](https://img.shields.io/github/license/HaruhiYunona/VioletBlue)
+![GitHub repo size](https://img.shields.io/github/repo-size/HaruhiYunona/VioletBlue)
+![Static Badge](https://img.shields.io/badge/PHP-8.4.1+-purple?logo=PHP)
+![Static Badge](https://img.shields.io/badge/Tailwindcss-4.3.3+-blue?logo=Tailwindcss)
+![Static Badge](https://img.shields.io/badge/NodeJS-22.20.0+-blue?logo=Node.js)
+![Static Badge](https://img.shields.io/badge/Vue-3.5.44+-green?logo=vue.js)
+![Static Badge](https://img.shields.io/badge/composer-2.8.6+-purple?logo=composer)
+![Static Badge](https://img.shields.io/badge/docker-29.9.2+-blue?logo=docker)
 
 **♡ ReadMe Language ♡**
 
