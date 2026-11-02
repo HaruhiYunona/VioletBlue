@@ -88,7 +88,7 @@ yarn --cwd frontend build
 5. 以下のコマンドを実行します。
 
    ```shell
-   php migrate.php
+   php script_migrate.php
    ```
 
    エラーが出た場合は、3行目のパスを修正してください。どう直すかは実際の環境に合わせて判断してください。AI に聞いてみてもいいと思います。
@@ -96,7 +96,7 @@ yarn --cwd frontend build
 6. エラーではなく、古いデータベースの情報を検出したという表示が出たら、あと少しです。以下のコマンドで移行を完了します。
 
    ```shell
-   php migrate.php --apply
+   php script_migrate.php --apply
    ```
 
    これでデータの移行は完了です。
