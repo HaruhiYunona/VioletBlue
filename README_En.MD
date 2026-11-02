@@ -88,7 +88,7 @@ If you're upgrading from version 1.1 or earlier, follow these steps:
 5. Run:
 
    ```shell
-   php migrate.php
+   php script_migrate.php
    ```
 
    If you get an error, adjust the path on line 3 to match your server setup. You'll need to work out the right path yourself, or ask an AI.
@@ -96,7 +96,7 @@ If you're upgrading from version 1.1 or earlier, follow these steps:
 6. If the script reports that it found the old database rather than showing an error, you're nearly there. Run the following command to finish the migration:
 
    ```shell
-   php migrate.php --apply
+   php script_migrate.php --apply
    ```
 
    That's it—your data has been migrated.
