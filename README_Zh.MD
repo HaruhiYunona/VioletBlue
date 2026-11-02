@@ -88,7 +88,7 @@ yarn --cwd frontend build
 5. 執行以下指令：
 
    ```shell
-   php migrate.php
+   php script_migrate.php
    ```
 
    如果出現錯誤，請修改第 3 行的路徑。要怎麼改，請依實際環境判斷，也可以問 AI。
@@ -96,7 +96,7 @@ yarn --cwd frontend build
 6. 如果沒有錯誤，而是提示偵測到舊資料庫資訊，恭喜，再執行以下指令就能完成遷移：
 
    ```shell
-   php migrate.php --apply
+   php script_migrate.php --apply
    ```
 
    到這裡，資料遷移就完成了。
