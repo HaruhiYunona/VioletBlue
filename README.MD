@@ -144,8 +144,8 @@ yarn --cwd frontend build
 7. 改用更先进的技术
 
 # 联系方式
-本项目讨论群（QQ）：606917884
-作者的Github: [https://github.com/HaruhiYunona](https://github.com/HaruhiYunona)
-作者的X: [https://x.com/@Neko_Kuyo](https://x.com/@Neko_Kuyo)
+- 本项目讨论群（QQ）：606917884
+- 作者的Github: [https://github.com/HaruhiYunona](https://github.com/HaruhiYunona)
+- 作者的X: [https://x.com/@Neko_Kuyo](https://x.com/@Neko_Kuyo)
 
-感谢[LittleAilurus](https://github.com/LittleAilurus) 提供的主播查询接口
+**感谢[LittleAilurus](https://github.com/LittleAilurus) 提供的主播查询接口**
