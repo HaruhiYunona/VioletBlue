@@ -12,6 +12,7 @@ const operationLabels: Record<string, string> = {
   clearSongList: '正在清空歌单…',
   cancelImport: '正在取消导入…',
   startUpdate: '正在创建更新任务…',
+  applyMigration: '正在迁移数据库…',
 }
 
 /** 用途：读取同源 CSRF Cookie；入参：无；返回值：Token。 */

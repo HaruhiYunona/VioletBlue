@@ -1,42 +1,32 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__ . '/src/bootstrap.php';
 
 use VioletBlue\model\model_database;
-use VioletBlue\support\support_config;
+use VioletBlue\service\service_migration;
 
-if (PHP_SAPI !== 'cli') {
-    http_response_code(404);
-    exit;
-}
+if (PHP_SAPI !== 'cli') { http_response_code(404); exit; }
 
 try {
-    $pdo = model_database::connection();
-    $song = model_database::table('song');
-    $others = model_database::table('others');
-    $count = (int) $pdo->query('SELECT COUNT(*) FROM ' . $song)->fetchColumn();
-    $duplicates = $pdo->query('SELECT name,singer,COUNT(*) AS total FROM ' . $song . ' GROUP BY name,singer HAVING COUNT(*) > 1')->fetchAll();
-    if ($duplicates !== []) {
-        throw new RuntimeException('旧库存在重复歌名和歌手，请先处理重复记录后重新迁移：' . json_encode($duplicates, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR));
+    // 支持网站根目录或 scripts 目录，以及源码与安装包两种布局。
+    $loaded = false;
+    foreach ([__DIR__ . '/app/bootstrap.php', dirname(__DIR__) . '/app/bootstrap.php', __DIR__ . '/src/bootstrap.php', dirname(__DIR__) . '/src/bootstrap.php'] as $bootstrap) {
+        if (is_file($bootstrap)) { require_once $bootstrap; $loaded = true; break; }
     }
-    echo '当前数据库：' . $pdo->query('SELECT DATABASE()')->fetchColumn() . '；目标表：' . $song . '、' . $others . "。\n";
-    echo '已找到歌曲 ' . $count . " 首。迁移保留歌曲、公告和标签；应用后将管理员密码重置为 123456。\n";
+    if (!$loaded) throw new RuntimeException('未找到程序入口。请将脚本放在网站根目录或 scripts 目录，并使用 PHP 8.4.1+ 执行。');
+    $database = (string) model_database::connection()->query('SELECT DATABASE()')->fetchColumn();
+    $prefix = substr(trim(model_database::table('song'), '`'), 0, -5);
+    $service = new service_migration();
+    $preview = $service->preview($database, $prefix);
+    echo '当前数据库：' . $database . '；目标表：' . $preview['song_table'] . '、' . $preview['others_table'] . "。\n";
+    echo '歌曲 ' . $preview['total'] . ' 首，重复组 ' . count($preview['groups']) . ' 组，处理后保留 ' . $preview['remaining'] . " 首。\n";
+    foreach ($preview['groups'] as $group) echo json_encode($group, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n";
     if (!in_array('--apply', $argv, true)) {
-        echo "预检查完成。备份旧库后执行 php scripts/script_migrate.php --apply 应用迁移。\n";
+        echo "预览完成。执行本脚本并添加 --apply --deduplicate 去重迁移，或 --apply --merge 合并迁移。迁移后密码为 123456。\n";
         exit(0);
     }
-    $pdo->exec('ALTER TABLE ' . $others . ' ENGINE=InnoDB, CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci, MODIFY value TEXT NOT NULL');
-    $pdo->exec('ALTER TABLE ' . $song . ' ENGINE=InnoDB, ROW_FORMAT=DYNAMIC, CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci, MODIFY name VARCHAR(300) NOT NULL, MODIFY singer VARCHAR(300) NOT NULL, MODIFY time BIGINT NOT NULL');
-    $indexes = $pdo->query('SHOW INDEX FROM ' . $song)->fetchAll();
-    if (!in_array('song_identity', array_column($indexes, 'Key_name'), true)) {
-        $pdo->exec('ALTER TABLE ' . $song . ' ADD UNIQUE KEY song_identity (name,singer)');
-    }
-    // 字段扩容和索引升级成功后重置当前站点账号；缺少密码记录时补建。
-    $password = password_hash('123456', PASSWORD_DEFAULT);
-    $statement = $pdo->prepare('INSERT INTO ' . $others . ' (name,value) VALUES (?,?) ON DUPLICATE KEY UPDATE value = ?');
-    $statement->execute(['passWd', $password, $password]);
-    support_config::atomic(support_config::publicRoot() . '/install/.block', 'migrated');
-    echo "迁移完成。管理员密码已重置为 123456，请登录后在网站设置中修改。\n";
+    if ($preview['groups'] !== [] && !in_array('--merge', $argv, true) && !in_array('--deduplicate', $argv, true)) throw new RuntimeException('存在重复歌曲，请添加 --deduplicate 或 --merge 选择处理方式。');
+    $result = $service->apply($database, $prefix, in_array('--merge', $argv, true) ? 'merge' : 'deduplicate', $preview['fingerprint']);
+    echo '迁移完成，保留 ' . $result['total'] . ' 首歌曲。原表备份：' . implode('、', $result['backups']) . "。\n管理员密码已重置为 123456，请登录后修改。\n";
 } catch (Throwable $error) {
     fwrite(STDERR, $error->getMessage() . "\n");
     exit(1);

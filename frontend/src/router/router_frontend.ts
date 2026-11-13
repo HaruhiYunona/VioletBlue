@@ -20,6 +20,7 @@ export const router = createRouter({
         { path: 'theme', component: () => import('../views/view_theme.vue') },
         { path: 'upload/:type', component: () => import('../views/view_upload.vue') },
         { path: 'updates', component: () => import('../views/view_updates.vue') },
+        { path: 'migration', component: () => import('../views/view_migration.vue') },
         { path: 'info/:page', component: () => import('../views/view_information.vue') },
       ],
     },

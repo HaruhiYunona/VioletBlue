@@ -10,7 +10,7 @@ use VioletBlue\support\{support_input, support_config, support_api_error};
 final class router_api
 {
     public const READ = ['getTagList', 'getSongList', 'getNotice', 'search', 'random', 'detail', 'vUpInfo', 'siteInfo', 'getVersion', 'getUpdate', 'themeInfo', 'sessionInfo'];
-    public const WRITE = ['submitSong', 'submitSongs', 'delete', 'edit', 'clearSongList', 'startImport', 'importStatus', 'cancelImport', 'changeOption', 'changeSetting', 'uploadFile', 'changeTheme', 'logout', 'startUpdate', 'getUpdateStatus'];
+    public const WRITE = ['submitSong', 'submitSongs', 'delete', 'edit', 'clearSongList', 'startImport', 'importStatus', 'cancelImport', 'changeOption', 'changeSetting', 'uploadFile', 'changeTheme', 'logout', 'startUpdate', 'getUpdateStatus', 'getMigrationDatabases', 'previewMigration', 'applyMigration'];
 
     /**
      * 执行接口校验、鉴权及异常到 HTTP 状态的转换。

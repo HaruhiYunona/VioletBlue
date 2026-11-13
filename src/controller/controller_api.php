@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace VioletBlue\controller;
 
-use VioletBlue\service\{service_auth, service_playlist, service_options, service_upload, service_remote, service_theme, service_import, service_release, service_update};
+use VioletBlue\service\{service_auth, service_playlist, service_options, service_upload, service_remote, service_theme, service_import, service_release, service_update, service_migration};
 use VioletBlue\support\support_input;
 
 /** 将路由操作映射到歌曲、设置、认证和上传服务。 */
@@ -47,6 +47,9 @@ final class controller_api
             'getUpdate' => (new service_release())->check(($input['force'] ?? false) === true),
             'startUpdate' => (new service_update())->start(support_input::text($input, 'version')),
             'getUpdateStatus' => (new service_update())->status(support_input::text($input, 'id')),
+            'getMigrationDatabases' => (new service_migration())->databases(),
+            'previewMigration' => (new service_migration())->preview(support_input::text($input, 'database'), support_input::text($input, 'prefix')),
+            'applyMigration' => (new service_migration())->apply(support_input::text($input, 'database'), support_input::text($input, 'prefix'), support_input::text($input, 'mode'), support_input::text($input, 'fingerprint')),
         };
     }
 }

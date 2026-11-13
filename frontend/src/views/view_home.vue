@@ -7,6 +7,7 @@ const cards = [
   ['修改歌曲', '打开歌单，点击歌曲修改歌曲信息。', '/', 'edit-3'],
   ['网站设置', '修改公告、歌曲标签与管理员密码。', '/admin/options', 'toggle-left'],
   ['日志与更新', '获取版本信息或查看更新日志。', '/admin/updates', 'download-cloud'],
+  ['数据库迁移', '预览旧歌单，处理重复歌曲并迁移数据库。', '/admin/migration', 'layers'],
   ['基础设置', '修改网站信息、B站 MID 与静态资源。', '/admin/settings', 'settings'],
   ['网站配色', '修改前台颜色与电脑端右栏卡片，实时预览并保存。', '/admin/theme', 'sidebar'],
   ['联系方式', '查看原作者的联系方式。', '/admin/info/contact', 'smartphone'],
